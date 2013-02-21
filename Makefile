@@ -51,9 +51,9 @@ release_pre:
 	mkdir -p $(RELEASE_NAME)/js
 
 fix_path:
-	sed -e 's;!DEPLOY_PATH!;$(DEPLOY_PATH)/$(RELEASE_NAME);g' -i bak $(RELEASE_NAME)/data/vmwebadmd.xml
-	sed -e 's;!DEPLOY_PATH!;$(DEPLOY_PATH)/$(RELEASE_NAME);g' -i bak $(RELEASE_NAME)/vmwebadm
-	sed -e 's;!DEPLOY_PATH!;$(DEPLOY_PATH)/$(RELEASE_NAME);g' -i bak $(RELEASE_NAME)/vmwebadmd
+	sed -e 's;!DEPLOY_PATH!;$(DEPLOY_PATH)/$(RELEASE_NAME);g' -i~ $(RELEASE_NAME)/data/vmwebadmd.xml
+	sed -e 's;!DEPLOY_PATH!;$(DEPLOY_PATH)/$(RELEASE_NAME);g' -i~ $(RELEASE_NAME)/vmwebadm
+	sed -e 's;!DEPLOY_PATH!;$(DEPLOY_PATH)/$(RELEASE_NAME);g' -i~ $(RELEASE_NAME)/vmwebadmd
 
 release_main:
 	cp out/client/client.js out/server/server.js $(RELEASE_NAME)/js
