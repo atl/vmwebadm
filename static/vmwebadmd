@@ -3,7 +3,7 @@
 export NODE_PATH="/usr/img/node_modules:!DEPLOY_PATH!/jslib:/usr/vm/node_modules/:$NODE_PATH"
 
 NODE=node
-if [ -f /usr/node/bin/node ]
+if [ -f /usr/node/bin/node ]; then
         NODE=/usr/node/bin/node
 fi
 start() {
