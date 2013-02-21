@@ -1,12 +1,14 @@
+-include Makefile.local
+
 SERVER_SRC_FILES=$(shell find src/server -name "*.cljs")
 CLIENT_SRC_FILES=$(shell find src/client -name "*.cljs")
 CLOJURESCRIPT_HOME=./clojurescript
 SERVER_FILES=src/server/
 CLIENT_FILES=src/client/
 CLJSC_CP=lib/*:
-DEPLOY_USER=root
-DEPLOY_HOST=172.16.0.4
-DEPLOY_PATH=/opt
+DEPLOY_USER?=root
+DEPLOY_HOST?=172.16.0.4
+DEPLOY_PATH?=/opt
 RELEASE_NAME=vmwebadm
 RELEASE_VERSION=0.4.4
 

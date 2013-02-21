@@ -9,3 +9,4 @@ db.js
 release
 vmwebadm
 *.bz2
+Makefile.local
